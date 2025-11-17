@@ -1,32 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>SIT 725 Prac 1</title>
-        <meta name="description" content="Basic template for SIT 725 Prac 1">
-        <meta name="author" content="SitePoint">
-
-        <meta property="og:title" content="SIT 725 Prac 1">
-        <meta property="og:type" content="website">
-        <meta property="og:description" content="Basic template for SIT 725 Prac 1">
-
-        <!-- Compiled and minified CSS -->
-         <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    </head>
-
-    <body>
-        <div class="container">
-            <div class="row">
-                <h1 id="heading" class="center-align">SIT 725</h1>
-            </div>
-        </div>
-        <div class="col s12 center-align">
-            <a class="waves-effect waves-light btn" onclick="changeText()">Change Text</a>
-        </div>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Task 2.2P</title>
+</head>
+<body>
+  <h1>Addition Calculator</h1>
+  <form action="/addition" method="GET">
+    <label for="num">Enter the first number to add:</label>
+    <input type="text" id="num" name="num" required>
+    <label for="num2">Enter the second number to add:</label>
+    <input type="text" id="num2" name="num2" required>
+    <button type="submit">Add Values</button>
+  </form>
+</body>
 </html>
