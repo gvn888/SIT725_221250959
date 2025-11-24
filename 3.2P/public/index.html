@@ -36,7 +36,7 @@
                         <img class="materialboxed materialboxed-image" src="images/livedemo.png">
                     </div>
                     <div class="col s12 center-align">
-                        <a class="waves-effect waves-light btn click-me-button" id="clickMeButton"><i class="material-icons left">auto_fix_high</i>Click Me</a>
+                        <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" href="#modal"><i class="material-icons left">auto_fix_high</i>Click Me</a>
                     </div>
                 </div>
                 <div class="row" id="card-section">
@@ -55,6 +55,39 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div id="modal" class="modal modal-fixed-footer">
+                <div class="row modal-content">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 center-align">
+                                <a class="waves-effect waves-light btn" id="formSubmit">submit</a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </main>

@@ -18,6 +18,16 @@ const clickMe = () => {
     alert("You clicked it.")
 }
 
+const submitForm = () => {
+    let formData = {};
+    formData.first_name = $('#first_name').val();
+    formData.last_name = $('#last_name').val();
+    formData.password = $('#password').val();
+    formData.email = $('#email').val();
+
+    console.log("Form Data Submitted: ", formData);
+}
+
 const addCards = (items) => {
     items.forEach(item => {
         let itemToAppend = '<div class=col s4 center-align">'+
@@ -33,9 +43,10 @@ const addCards = (items) => {
 }
 
 $(document).ready(function() {
-    $('materialboxed').materialbox();
-    $('#clickMeButton').click(() => {
-        clickMe();
+    $('.materialboxed').materialbox();
+    $('#formSubmit').click(() => {
+        submitForm();
     })
     addCards(cardList);
+    $('.modal').modal();
 });
