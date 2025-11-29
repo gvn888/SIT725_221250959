@@ -13,7 +13,6 @@ const cardList = [
     }
 ]
 
-
 const clickMe = () => {
     alert("You clicked it.")
 }
@@ -43,6 +42,39 @@ const addCards = (items) => {
 }
 
 $(document).ready(function() {
+
+    $("#images").on("click", function (e) {
+        e.preventDefault();
+
+        fetch("/api/images")
+            .then(response => response.json())
+            .then(data => {
+                const container = $("#imageList");
+                container.empty();
+
+                if (!data.images || data.images.length === 0) {
+                    container.append("<p>No images found.</p>");
+                    return;
+                }
+
+                data.images.forEach(img => {
+                    const card = `
+                        <div class="card small" style="display:inline-block; margin:10px; width:200px;">
+                            <div class="card-image">
+                                <img src="${img.url}" style="height:150px; object-fit:contain;">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title" style="font-size:1rem">${img.name}</span>
+                            </div>
+                        </div>
+                    `;
+                    container.append(card);
+                });
+            })
+            .catch(err => {
+                console.error("Error loading images:", err);
+            });
+    });
     $('.materialboxed').materialbox();
     $('#formSubmit').click(() => {
         submitForm();
